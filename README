@@ -1,0 +1,29 @@
+Um simples crawler feito em python para saber o status de um objeto solicitado por sedex.
+
+Falta documentar o código.
+
+Uso:
+Você deve passar o código do sedex.
+
+sro = PythonCorreiosSro('SI516463543BR')
+
+for obj_status in sro.status:
+	print obj_status
+
+Usar com json
+Usei no django assim
+views.py
+...
+import json
+
+
+def acompanha_pedido_correios(request):
+	if request.is_ajax():
+		sro = PythonCorreiosSro('SI516463543BR')
+		data_json = json.dumps(sro.status)
+		return HttpResponse(data, mimetype='application/javascript')
+	return HttpResponseServerError
+
+
+
+

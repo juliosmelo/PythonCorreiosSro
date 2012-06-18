@@ -1,5 +1,4 @@
-#! -*- encoding:utf-8 -*- 
-
+#! -*- encoding:utf-8 -*- W
 """
 Created on Jun 18 2012
 @author Julio Silveira Melo
@@ -8,7 +7,6 @@ Created on Jun 18 2012
 
 import urllib
 import urllib2
-import json
 from bs4 import BeautifulSoup
 import socket
 
@@ -72,15 +70,6 @@ class PythonCorreiosSro:
 		except AttributeError:
 			data = []
 			return data
-
-
-sro = PythonCorreiosSro('SI516463543BR')
-#print sro.response()
-if sro.status:
-	for statu in sro.status:
-		print statu
-
-
 
 
 
