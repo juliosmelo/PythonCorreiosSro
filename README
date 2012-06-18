@@ -1,4 +1,4 @@
-Um simples crawler feito em python para saber o status de um objeto solicitado por sedex.
+Um simples crawler feito em python para saber o status de um objeto enviado por sedex.
 
 Falta documentar o código.
 
@@ -21,7 +21,7 @@ def acompanha_pedido_correios(request):
 	if request.is_ajax():
 		sro = PythonCorreiosSro('SI516463543BR')
 		data_json = json.dumps(sro.status)
-		return HttpResponse(data, mimetype='application/javascript')
+		return HttpResponse(data_json, mimetype='application/javascript')
 	return HttpResponseServerError
 
 
